@@ -6,9 +6,21 @@ import Show from './../Show';
 
 const testShow = {
     //add in approprate test data structure here.
+    name: "Test Show",
+    summary: "Test Summary",
+    seasons: [
+            {id:0, name: "Season 1", episodes: []}, 
+            {id:1, name: "Season 2", episodes: []}, 
+            {id:2, name: "Season 3", episodes: []}, 
+            {id:3, name: "Season 4", episodes: []}
+    ]
 }
 
 test('renders testShow and no selected Season without errors', ()=>{
+    //Arrange: renders with no selected season
+    render(<Show seasons={[]}/>);
+
+    //Act: Click 
 });
 
 test('renders Loading component when prop show is null', () => {
