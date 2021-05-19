@@ -35,7 +35,9 @@ test("renders the summury test passed as prop", ()=>{
     const value = screen.queryByText(/test summary statement./i);
 
     //Assert: test summary statement exists
-    expect(value).toBeInTheDocument;
+    expect(value).toBeInTheDocument();
+    expect(value).toBeTruthy();
+    expect(value).toHaveTextContent("Test summary statement.");
 
 });
 
@@ -47,7 +49,7 @@ test("renders default image when image is not defined", ()=>{
     const image = screen.queryByAltText(/stranger_things.png/i);
 
     //Assert: default img exists
-    expect(image).toBeInTheDocument;
+    expect(image).toBeInTheDocument();
 });
 
 //Tasks
